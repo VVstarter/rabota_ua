@@ -1,8 +1,8 @@
 Usage rabota_ua_scrapy
 -----
 
-1. open root directory in terminal
-2. write the command:
+1. Open root directory in terminal
+2. Write the command:
 ```
 cd rabota_ua_scrapy
 ```
@@ -22,8 +22,8 @@ docker-compose up --build -d
 Usage rabota_ua_requests
 -----
 
-1. open root directory in terminal
-2. write the command:
+1. Open root directory in terminal
+2. Write the command:
 ```
 cd rabota_ua_requests
 ```
