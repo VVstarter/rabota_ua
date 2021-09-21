@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+
+    postgres:
+        container_name: postgres
+        image: postgres:11-alpine
+        restart: always
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./postgres-data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_DB: job
+            POSTGRES_USER: user_adFrjd
+            POSTGRES_PASSWORD: fkrE5ld2rlfCvyij
+
+    rabota_ua_requests:
+        depends_on:
+            - postgres
+        container_name: rabota_ua_requests
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        environment:
+            SEARCH_QUERY: job
+            SEARCH_TOWN: Kiyv
+            POSTGRESQL_DB: job
+            POSTGRESQL_USER: user_adFrjd
+            POSTGRESQL_PASSWORD: fkrE5ld2rlfCvyij
+#            PROXIES: your_proxies

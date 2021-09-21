@@ -1,0 +1,5 @@
+scrapy==2.5.0
+googletrans==3.1.0a0
+fake-useragent==0.1.11
+sqlalchemy==1.4.23
+psycopg2-binary==2.9.1
